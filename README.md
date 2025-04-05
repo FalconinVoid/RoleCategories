@@ -10,7 +10,7 @@ Translations, configuration and permissions can be easily set to your desires in
 ## Translations
 Can be changed in the standard translation file.
 ## Configuration
-To set roles and categories, you need your RoleID set in your [Custom Role Configuration](https://github.com/UncomplicatedCustomServer/UncomplicatedCustomRoles/wiki#create-custom-roles) and then your category.
+To set roles and categories, you need your RoleID set in your Custom Role Configuration (https://github.com/UncomplicatedCustomServer/UncomplicatedCustomRoles/wiki#create-custom-roles) and then your category.
 The category can be named however you want. This is not case sensitive.
 ## Permissions
 There are 3 types of permissions:
