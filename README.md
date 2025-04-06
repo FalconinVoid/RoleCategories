@@ -16,6 +16,6 @@ The category can be named however you want. This is not case sensitive.
 There are 2 types of permissions:
 - BASIC: "falcon.customroles.basic": This permission grants access to viewing categories and roles.
 - ~~GIVE: "falcon.customroles.give": Everything from BASIC and giving yourself any subrole at any time.~~
-- ADMIN: "falcon.customroles.admin": Everything from BASIC and giving anyone a subrole.
-Additionaly, everyone besides ADMIN will need auto generated permissions per category:
+- ADMIN: "falcon.customroles.admin": Everything from BASIC and giving anyone a subrole.  
+Additionaly, everyone besides ADMIN will need auto generated permissions per category:  
 So, for "ExampleCategory" you will need the permission "falcon.customroles.examplecategory".
