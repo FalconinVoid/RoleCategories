@@ -1,12 +1,13 @@
 ﻿using CommandSystem;
 using Exiled.Permissions.Extensions;
 
+//RoleCategories © 2025 by FalconinVoid is licensed under CC BY-ND 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nd/4.0/
+
 namespace RoleCategories
 {
     public enum PluginPermissions
     {
         Basic,
-        Give,
         Admin
     }
     public static class PluginPermissionsManager
@@ -16,9 +17,7 @@ namespace RoleCategories
             switch (permission)
             {
                 case PluginPermissions.Basic:
-                    return Permissions.CheckPermission(sender, "falcon.customroles.basic") || Permissions.CheckPermission(sender, "falcon.customroles.give") || Permissions.CheckPermission(sender, "falcon.customroles.admin");
-                case PluginPermissions.Give:
-                    return Permissions.CheckPermission(sender, "falcon.customroles.give" ) || Permissions.CheckPermission(sender, "falcon.customroles.admin");
+                    return Permissions.CheckPermission(sender, "falcon.customroles.basic") || Permissions.CheckPermission(sender, "falcon.customroles.admin");
                 case PluginPermissions.Admin:
                     return Permissions.CheckPermission(sender, "falcon.customroles.admin");
             }

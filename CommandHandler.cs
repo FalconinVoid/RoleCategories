@@ -10,6 +10,8 @@ using UncomplicatedCustomRoles.API.Features;
 using UncomplicatedCustomRoles.API.Interfaces;
 using UncomplicatedCustomRoles.Extensions;
 
+//RoleCategories © 2025 by FalconinVoid is licensed under CC BY-ND 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nd/4.0/
+
 namespace RoleCategories
 {
     [CommandHandler(typeof(RemoteAdminCommandHandler))]
@@ -51,7 +53,7 @@ namespace RoleCategories
                             response = GiveAdmin(arguments, out success);
                             return success;
                         }
-                        else if (PluginPermissionsManager.HasPermission(sender, PluginPermissions.Give))
+                        else
                         {
                             if (Round.IsLobby)
                             {
@@ -61,7 +63,6 @@ namespace RoleCategories
                             response = Give(sender, arguments, out success);
                             return success;
                         }
-                        break;
                 }
                 response = translation.NoPermissions;
             }
