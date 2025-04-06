@@ -15,10 +15,9 @@ namespace RoleCategories
         public override string Name => "RoleCategories";
         public override string Prefix => "RCategories";
         public override Version RequiredExiledVersion => new Version(9, 5, 1);
-        public override Version Version => new Version(1, 0, 0);
+        public override Version Version => new Version(1, 1, 0);
         public override void OnEnabled()
         {
-            Log.Debug("Debug is enabled.");
             base.OnEnabled();
         }
         public override void OnDisabled()

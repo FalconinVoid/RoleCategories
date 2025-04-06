@@ -5,6 +5,7 @@ using System.Text;
 
 using CommandSystem;
 using Exiled.API.Features;
+using Exiled.Permissions.Extensions;
 using UncomplicatedCustomRoles.API.Features;
 using UncomplicatedCustomRoles.API.Interfaces;
 using UncomplicatedCustomRoles.Extensions;
@@ -168,9 +169,16 @@ namespace RoleCategories
                 ICustomRole customRole = GetCustomRole(arguments.Array[2]);
                 if (customRole != null)
                 {
-                    response = $"{translation.ChangedRole} {customRole.Name}";
-                    Player.Get(sender).SetCustomRole(customRole);
-                    success = true;
+                    if (!Permissions.CheckPermission(sender, $"falcon.customroles.{Plugin.Instance.Config.RoleCategory[customRole.Id].ToLower()}"))
+                    {
+                        response = translation.NoPermissions;
+                    }
+                    else
+                    {
+                        response = $"{translation.ChangedRole} {customRole.Name}";
+                        Player.Get(sender).SetCustomRole(customRole);
+                        success = true;
+                    }
                 }
                 else
                 {
