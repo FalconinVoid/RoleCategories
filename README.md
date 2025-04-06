@@ -13,7 +13,9 @@ Can be changed in the standard translation file.
 To set roles and categories, you need your RoleID set in your Custom Role Configuration (https://github.com/UncomplicatedCustomServer/UncomplicatedCustomRoles/wiki#create-custom-roles) and then your category.
 The category can be named however you want. This is not case sensitive.
 ## Permissions
-There are 3 types of permissions:
+There are 2 types of permissions:
 - BASIC: "falcon.customroles.basic": This permission grants access to viewing categories and roles.
-- GIVE: "falcon.customroles.give": Everything from BASIC and giving yourself any subrole at any time.
+- ~~GIVE: "falcon.customroles.give": Everything from BASIC and giving yourself any subrole at any time.~~
 - ADMIN: "falcon.customroles.admin": Everything from BASIC and giving anyone a subrole.
+Additionaly, everyone besides ADMIN will need auto generated permissions per category:
+So, for "ExampleCategory" you will need the permission "falcon.customroles.examplecategory".
